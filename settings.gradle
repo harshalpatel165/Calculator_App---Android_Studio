@@ -1,0 +1,3 @@
+rootProject.name = "Calculator Project Android Studio"
+include ':app'
+include ':apps'

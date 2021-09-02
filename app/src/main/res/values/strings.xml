@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculator Project Android Studio</string>
+    <string name="calcButton">Calculator</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="squareRoot">\\u221a</string>
+    <string name="cubeRoot">\\u221B</string>
+</resources>

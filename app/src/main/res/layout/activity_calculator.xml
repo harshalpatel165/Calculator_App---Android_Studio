@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Calculator">
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="154dp"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <FrameLayout
+        android:id="@+id/flFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="379dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="500dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/basicFragButton"
+        android:layout_width="91dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="28dp"
+        android:onClick="basicButtonOnClick"
+        android:text="basic"
+        app:layout_constraintBottom_toTopOf="@+id/flFragment"
+        app:layout_constraintEnd_toStartOf="@+id/advancedFragButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/advancedFragButton"
+        android:layout_width="91dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="25dp"
+        android:onClick="advancedButtonOnClick"
+        android:text="ADV."
+        app:layout_constraintBottom_toTopOf="@+id/flFragment"
+        app:layout_constraintEnd_toStartOf="@+id/buttonUndo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/basicFragButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/buttonUndo"
+        android:layout_width="51dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/green_trading_button_effect"
+        app:layout_constraintBottom_toTopOf="@+id/flFragment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/advancedFragButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@android:drawable/ic_input_delete" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
